@@ -1,0 +1,44 @@
+.header-site{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom: 1px solid black;
+    }
+
+    .header-logo{
+        min-width: 225px;
+        img{
+            height: 70px;
+        }
+    }
+
+    .header-menu{
+        display: flex;
+        align-items: center;
+        &__item{
+            &:hover{
+                color: gray;
+                transition: 0.2s;
+            }
+            &:nth-child(n+2):nth-child(-n+6){
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .header-link{
+        display: flex;
+        font-size: 20px;
+        font-weight: bold;
+        align-items: center;
+    }
+}
