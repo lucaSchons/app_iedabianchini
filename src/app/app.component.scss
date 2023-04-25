@@ -1,7 +1,8 @@
 .header-site{
     width: 100%;
     position: fixed;
-    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
+    
 
     .header-container{
         align-items: center;
@@ -24,7 +25,10 @@
         display: flex;
         align-items: center;
         &__item{
-            font-size: 15px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #222222;
             &:hover{
                 color: var(--roxo);
                 transition: 0.2s;
