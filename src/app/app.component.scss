@@ -1,8 +1,12 @@
 .header-site{
     width: 100%;
-    position: fixed;
     box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
-    
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;  
+    background-color: var(--primary);
 
     .header-container{
         align-items: center;
@@ -49,6 +53,22 @@
             vertical-align: middle;
         }
     }
+}
+
+.section-banner{
+    background: url(../assets/banner_ieda.png) 27% no-repeat;
+    width: 100%;
+    height: 600px;
+    min-height: 500px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height: 200px;
+    }
+
 }
 
 @media (max-width: 992px){
