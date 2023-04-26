@@ -14,7 +14,7 @@
         justify-content: space-between;
         margin-right: auto;
         margin-left: auto;
-        padding: 5px 30px 5px 30px;
+        padding: 5px 40px 5px 40px;
     }
 
     .header-logo{
@@ -58,27 +58,98 @@
 .section-banner{
     background: url(../assets/banner_ieda.png) 27% no-repeat;
     width: 100%;
-    height: 600px;
-    min-height: 500px;
+    min-height: 200px;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
+    &__container{
+        display: flex;
+        width: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 50px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        &__grid-1{
+            padding: 25px;
+            h2{
+                font-size: 3rem;
+                text-transform: uppercase;
+                color: var(--primary);
+                padding: 2px 5px 0px 5px;
+            }
+            h3{
+                font-size: 1.8rem;
+                color: var(--primary);
+                padding: 0 5px 25px 5px;
+            }
+            .p1{
+                padding: 5px;
+                font-size: 1.1rem;
+                color: var(--primary);
+            }
+            .p2{
+                color: var(--primary);
+                padding: 2px 5px 15px 5px;
+                margin-bottom: 35px;
+                font-size: 1.1rem;
+            }
+            &__botao-wpp{
+                display: flex;
+                color: var(--primary);
+                background-color: var(--verde);
+                padding: 15px;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                font-weight: bold;
+                border-radius: 8px;
+                width: 350px;
+                justify-content: center;
+                i{
+                    font-size: 24px;
+                }
+                span{
+                    padding-left: 8px;
+                }
+                &:hover{
+                    transition-duration: .3s;
+                    transition-property: transform;
+                    transition-timing-function: ease-out;
+                    transform: translateY(-5px);
+                    background-color: var(--verdeclaro);   
+                }
+            }
+        }
 
-    img{
-        height: 200px;
+        &__grid-2{
+            display: flex;
+            padding: 25px 30px 0px;
+            justify-content: center;
+            img{
+                max-height: 435px;
+            }
+        }   
     }
-
 }
 
-@media (max-width: 992px){
+@media (max-width: 1080px){
     .header-site{
         .header-container{
             padding: 5px 80px;
         }
-
         .header-menu{
             display: none;
+        }
+    }
+    .section-banner{
+        .section-banner__container__grid-1{
+            text-align: center;
+            .teste{
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
