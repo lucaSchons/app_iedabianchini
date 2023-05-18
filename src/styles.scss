@@ -5,8 +5,15 @@
     --roxo: #9c5f72;
     --verde: #5F9C6D;
     --verdeclaro: #93bf85;
+    --azul: #015BAB;
+    --cinza-claro: #DBDBDB;
+    --cinza-texto: #7A7A7A;
+    --preto-texto: #303030;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     box-sizing: border-box;
