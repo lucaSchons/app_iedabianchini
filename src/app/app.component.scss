@@ -1,5 +1,4 @@
 /* CABEÇALHO */
-
 .header-site{
     width: 100%;
     box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
@@ -9,48 +8,42 @@
     position: fixed;
     z-index: 1000;  
     background-color: var(--primary);
-
     .header-container{
         align-items: center;
         display: flex;
         justify-content: space-between;
         margin-right: auto;
         margin-left: auto;
-        padding: 5px 40px 5px 40px;
+        padding: 5px 100px 5px 100px;
     }
-
     .header-logo{
-        
         img{
             display: block;
             height: 60px;
         }
     }
-
     .header-menu{
         display: flex;
         align-items: center;
         &__item{
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            color: #222222;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            color: var(--preto-texto);
             &:hover{
-                color: var(--roxo);
+                color: var(--azul);
                 transition: 0.2s;
             }
             &:nth-child(n+2):nth-child(-n+6){
-                margin-left: 10px;
+                margin-left: 15px;
             }
         }
     }
-
     .header-link{
         display: flex;
         font-size: 20px;
         font-weight: bold;
         align-items: center;
-
         img{
             vertical-align: middle;
         }
@@ -142,68 +135,74 @@
         margin: 50px;
         h2{
             text-align: center;
+            color: var(--preto-texto);
         }
     }
-   
     .container-beneficios{
         display: flex;
         justify-content: center;
-
+        margin: 35px;
         .container-card{
             display: flex;
-
+            max-width: 600px;
+            max-height: 180px;
+            &:nth-child(1){
+                margin-right: 35px;
+            }
             .section-beneficios__card{
                 display: flex;
                 padding: 32px;
                 border: 2px solid var(--cinza-claro);
-                margin: 20px;
                 border-radius: 20px;
                 flex-flow: column wrap;
-                width: 600px;
-                height: 180px;
-              
-                span{
+                width: 100%;
+                height: 100%;
+                h3{
                     color: var(--preto-texto);
+                    padding-bottom: 15px;
     
                 }
                 p{
                     color: var(--cinza-texto);
-                }
-    
-    
-              
-                
+                    font-weight: 400;
+                    line-height: 1.5;
+                }  
             }
-            
         }
-        
-        
     }
 }
+/*Contato*/
 .section-contato{
-    
+    background-color: var(--azul);
+    .logo-footer{
+        img{
+            width: 300px;
+        }
+    }
     .container-contato{
         display: flex;
         padding: 40px;
-        justify-content: center;
+        justify-content: space-around;
     }
     &__card{
         display: flex;
         padding: 20px 35px 20px 35px;
         border-radius: 8px;
-        width: 33%;
         justify-content: center;
         flex-direction: column;
         h2{
             font-size: 1.6rem;
             text-align: center;
             padding-bottom: 10px;
+            color: var(--primary);
         }
         span{
+            color: var(--primary);
             font-size: 1rem;
             text-align: center;
         }
         .icon{
+            color: var(--primary);
             padding-top: 20px;
             font-size: 1.2rem;
             align-items: center;
@@ -238,19 +237,38 @@
     }
     .container-footer{
         display: flex;
-        background-color: var(--azul);
+        background-color: var(--primary);
         justify-content: space-between;
         padding: 1% 5% 1% 5%;
         
         .copyright{
-            color: var(--primary);
+            color: var(--azul);
         }
         span{
-            color: var(--primary);
+            color: var(--azul);
         }
     }
 }
 
+@media (max-width: 1320px){
+    .section-beneficios{
+        .container-beneficios{
+            margin: 25px;
+            .container-card{
+                max-width: 500px;
+                max-height: 200px;
+                &:nth-child(1){
+                    margin-right: 25px;
+                }
+                .section-beneficios__card{
+                    padding: 20px;
+                
+                   
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 1080px){
     .header-site{
@@ -270,6 +288,38 @@
             }
         }
     }
+    .section-beneficios{
+        .container-beneficios{
+            .container-card{
+                max-width: 380px;
+                max-height: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 868px){
+    .section-beneficios{
+        .container-beneficios{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0;
+            margin-top: 0;
+            
+            .container-card{
+                display: flex;
+                max-width: 380px;
+                max-height: 350px;
+                margin-bottom: 25px;
+                margin-right: auto;
+                margin-left: auto;
+                align-items: center;
+
+                &:nth-child(1){
+                    margin-right: auto;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px){
@@ -280,6 +330,16 @@
     }
     .header-link{
         font-size: 17px;
+    }
+    .section-contato{
+        .container-contato{
+            flex-direction: column;
+            align-items: center;
+            .logo-footer{
+                padding: 20px 35px 20px 35px;
+            }
+        }
+
     }
 }
 
