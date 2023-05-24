@@ -9,6 +9,11 @@
     --cinza-claro: #DBDBDB;
     --cinza-texto: #7A7A7A;
     --preto-texto: #303030;
+    --cinza-back: #f2f2f2;
+}
+
+#main{
+    position: relative;
 }
 
 html{
@@ -35,6 +40,6 @@ ul {
 }
 
 * {
-    font-family: sans-serif, serif, "roboto";
+    font-family: sans-serif, serif, "roboto", "Poppins";
 }
 

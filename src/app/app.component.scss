@@ -131,6 +131,7 @@
 }
 /* BENEFICIOS */
 .section-beneficios{
+    padding-bottom: 45px;
     &__titulo{
         margin: 50px;
         h2{
@@ -167,6 +168,63 @@
                     font-weight: 400;
                     line-height: 1.5;
                 }  
+            }
+        }
+    }
+}
+/*SOBRE MIM*/
+.section-sobremim{
+    background-color: var(--cinza-back);
+    .container-sobremim{
+        display: flex;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 70px 0;
+    }
+    &__foto{
+        display: flex;
+        padding-right: 30px;
+        img{
+            display: flex;
+            border-radius: 10px;
+            max-height: 530px;
+            margin-left: 30px;
+        }
+    }
+    &__texto{
+        padding: 0 10px;
+        h2{
+            font-size: 1.2rem;
+            padding: 0 0 5px 0;
+            color: var(--azul);
+        }
+        h3{
+            font-size: 1.5rem;
+            padding: 5px 0;
+            color: var(--preto-texto);
+        }
+        p{
+            padding: 10px 0 20px 0;
+            color: var(--preto-texto);
+            line-height: 1.5;
+            font-size: 15px;
+        }
+        span{
+            font-size: 1.2rem;
+            color: var(--preto-texto);
+            font-weight: 600;
+        }
+        ul{
+            padding: 18px;
+            li{
+                padding-bottom: 5px;
+                line-height: 1.5;
+                font-size: 15px;
+            }
+            li::marker {
+                content: '•  ';
+                font-size: 1.2em;
+                color: var(--preto-texto);
             }
         }
     }
@@ -249,7 +307,6 @@
         }
     }
 }
-
 @media (max-width: 1320px){
     .section-beneficios{
         .container-beneficios{
@@ -269,7 +326,6 @@
         }
     }
 }
-
 @media (max-width: 1080px){
     .header-site{
         .header-container{
@@ -293,6 +349,28 @@
             .container-card{
                 max-width: 380px;
                 max-height: 300px;
+            }
+        }
+    }
+    .section-sobremim{
+        .container-sobremim{
+            flex-direction: column;
+            max-width: 500px;
+        }
+        &__foto{
+            justify-content: center;
+            padding-bottom: 35px;
+        }
+        &__texto{
+            justify-content: center;
+        }
+    }
+    .section-contato{
+        .container-contato{
+            .logo-footer{
+                img{
+                    width: 220px;
+                }
             }
         }
     }
@@ -321,7 +399,6 @@
         }
     }
 }
-
 @media (max-width: 768px){
     .header-site{
         .header-container{
@@ -337,12 +414,15 @@
             align-items: center;
             .logo-footer{
                 padding: 20px 35px 20px 35px;
+                img{
+                    width: 180px;
+                }
             }
         }
 
+
     }
 }
-
 @media (max-width: 610px){
     .header-site{
         .header-container{
@@ -396,6 +476,18 @@
             }   
         }
     }
+    .section-sobremim{
+        .container-sobremim{
+            max-width: 380px;
+        }
+        &__foto{
+            margin-left: 0;
+            img{
+                max-width: 380px;
+            }
+        }
+        
+    }
 }
 
 @media (max-width: 480px){
@@ -411,6 +503,25 @@
         .header-link{
             display: none;
         }
+    }
+    .section-sobremim{
+        .container-sobremim{
+            max-width: 300px;
+        }
+        &__foto{
+            padding: 0;
+            img{
+                max-width: 300px;
+                margin-left: 0;
+                align-items: center;
+            }
+        }
+        &__texto{
+            h2{
+                padding-top: 20px;
+            }
+        }
+        
     }
    
 }
@@ -444,6 +555,17 @@
         }
 
     }
+    .section-sobremim{
+        .container-sobremim{
+            max-width: 270px;
+        }
+        &__foto{
+            img{
+                max-width: 200px;
+            }
+        }
+    }
+   
    
 }
 
@@ -454,6 +576,16 @@
         }
         .header-link{
             display: none;
+        }
+    }
+    section-sobremim{
+        .container-sobremim{
+            max-width: 300px;
+        }
+        &__foto{
+            img{
+                max-width: 250px;
+            }
         }
     }
 } 
