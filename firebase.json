@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/iedabianchini",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

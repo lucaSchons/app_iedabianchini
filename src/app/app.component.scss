@@ -69,25 +69,30 @@
         &__grid-1{
             padding: 25px;
             h2{
-                font-size: 3rem;
+                font-size: 2.3rem;
                 text-transform: uppercase;
                 color: var(--primary);
-                padding: 2px 5px 0px 5px;
+                padding: 2px 5px 5px 5px;
             }
-            h3{
-                font-size: 1.8rem;
+            .h3{
+                font-size: 1.3rem;
                 color: var(--primary);
-                padding: 0 5px 25px 5px;
+                padding: 0 5px 5px 5px;
+                &-1{
+                    font-size: 1.3rem;
+                    color: var(--primary);
+                    padding: 0 5px 25px 5px;
+                }
             }
             .p1{
                 padding: 5px;
                 font-size: 1.1rem;
                 color: var(--primary);
+                margin-bottom: 35px;
             }
             .p2{
                 color: var(--primary);
                 padding: 2px 5px 15px 5px;
-                margin-bottom: 35px;
                 font-size: 1.1rem;
             }
             &__botao-wpp{
@@ -130,7 +135,7 @@
         }   
     }
 }
-/* BENEFICIOS */
+/*ESPECIALIDADES */
 .section-beneficios{
     padding-bottom: 45px;
     &__titulo{
@@ -138,6 +143,9 @@
         h2{
             text-align: center;
             color: var(--preto-texto);
+        }
+        span{
+            color: var(--azul);
         }
     }
     .container-beneficios{
@@ -147,7 +155,7 @@
         .container-card{
             display: flex;
             max-width: 600px;
-            max-height: 180px;
+            max-height: 400px;
             &:nth-child(1){
                 margin-right: 35px;
             }
@@ -225,11 +233,42 @@
         }
     }
 }
+/*INFORMACÃO*/
+.section-informacao{
+    .container-informacao{
+        display: flex;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 70px 40px 70px 40px;
+    }
+    &__imagem{
+        display: flex;
+        padding-right: 60px;
+        img{
+            display: flex;
+            max-width: 180px;
+        }
+    }
+    &__texto{
+        padding: 0 10px;
+        h2{
+            font-size: 1.5rem;
+            padding: 0 0 5px 0;
+            color: var(--preto-texto);
+        }
+        p{
+            padding: 10px 0 20px 0;
+            color: var(--preto-texto);
+            line-height: 1.5;
+            font-size: 15px;
+        }
+    }
+}
 /*ATENDIMENTO*/
 .section-atendimento{
     .container-atendimento{
         display: flex;
-        max-width: 1400px;
+        max-width: 1080px;
         margin: 0 auto;
         padding: 70px 40px 0 40px;
     }
@@ -385,16 +424,24 @@
         span{
             color: var(--azul);
         }
-
     }
 }
 @media (max-width: 1320px){
+    .section-banner{
+        .section-banner__container__grid-1{
+            text-align: center;
+            .teste{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
     .section-beneficios{
         .container-beneficios{
             margin: 25px;
             .container-card{
                 max-width: 500px;
-                max-height: 200px;
+                max-height: 250px;
                 &:nth-child(1){
                     margin-right: 25px;
                 }
@@ -415,6 +462,9 @@
         }
     }
     .section-banner{
+        &__container{
+            margin: 25px 25px 0 25px;
+        }
         .section-banner__container__grid-1{
             text-align: center;
             .teste{
@@ -488,6 +538,26 @@
             justify-content: center;
         }
     }
+    .section-informacao{
+        .container-informacao{
+            flex-direction: column;
+            padding: 40px 0;
+        }
+        &__texto{
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            margin: 0 auto;
+            padding-top: 70px;
+        }
+        &__imagem{
+            display: flex;
+            justify-content: center;
+            img{
+                max-width: 200px;
+            }
+        }
+    }
 }
 @media (max-width: 868px){
     .section-beneficios{
@@ -528,6 +598,32 @@
     }
     .header-link{
         font-size: 17px;
+    }
+    .section-banner{
+        .section-banner__container__grid-1{
+            padding: 10px 0 10px 0;
+            h2{
+                font-size: 2rem;
+            }
+            .h3{
+                font-size: 1.2rem;
+                padding: 0 5px 0px 5px;
+                &-1{
+                    font-size: 1.2rem;
+                }
+            }
+            .p1{
+                font-size: 1rem;
+            }
+        }
+    }
+    .section-informacao{
+        &__imagem{
+            padding: 0;
+            img{
+                max-width: 150px;
+            }
+        }
     }
     .section-atendimento__imagem{
         img{
@@ -609,27 +705,25 @@
     }
     .section-banner{
         margin-top: 58px;
-        &__container{
-            margin: 20px 50px 0 50px;
-            &__grid-1{
-                padding: 15px;
+        .section-banner__container{
+            margin: 20px 20px 0 20px;
+            .section-banner__container__grid-1{
+                padding: 15px 0px 15px 0;
+                text-align: left;
                 h2{
-                    font-size: 2.5rem;
-                    text-transform: uppercase;
-                    color: var(--primary);
-                    padding: 1px 5px 0px 5px;
+                    font-size: 1.4rem;
                 }
                 h3{
-                    font-size: 1.4rem;
-                    padding: 0 5px 25px 5px;
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    
+                    .h3-1{
+                        font-size: 1.1rem;
+                        padding: 0 5px 15px 0;
+                        line-height: 1.5;
+                    }
                 }
                 .p1{
-                    padding: 4px;
-                    font-size: 1rem;
-                }
-                .p2{
-                    padding: 1px 5px 15px 5px;
-                    margin-bottom: 15px;
                     font-size: 1rem;
                 }
                 &__botao-wpp{
@@ -731,13 +825,9 @@
     .section-banner{
         &__container{
             margin: 20px 0 0 0;
-            &__grid-1{
-                h2{
-                    font-size: 1.8rem;;
-                }
-                h3{
-                    font-size: 1.2rem;
-                }
+            .section-banner__container__grid-1{
+                text-align: left;
+                padding: 15px;
                 .p1{
                     font-size: 0.85rem;
                 }
@@ -755,6 +845,26 @@
             img{
                 max-width: 200px;
             }
+        }
+    }
+    .section-informacao{
+        .container-informacao{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        &__texto{
+            padding-top: 35px;
+        }
+        &__imagem{
+            padding: 0;
+            img{
+                max-width: 125px;
+            }
+        }
+    }
+    .section-atendimento{
+        &__texto{
+            padding-top: 25px;
         }
     }
 }
