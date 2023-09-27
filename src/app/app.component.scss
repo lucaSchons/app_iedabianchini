@@ -1,7 +1,8 @@
 /* CABEÇALHO */
 .header-site{
     width: 100%;
-    box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
+    -webkit-box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
+            box-shadow: 0 0 40px -20px rgb(0 0 0 / 25%);
     top: 0;
     right: 0;
     left: 0;
@@ -9,9 +10,15 @@
     z-index: 1000;  
     background-color: var(--primary);
     .header-container{
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-right: auto;
         margin-left: auto;
         padding: 5px 100px 5px 100px;
@@ -23,8 +30,12 @@
         }
     }
     .header-menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         &__item{
             font-size: 15px;
             font-family: "Poppins", sans-serif;
@@ -33,6 +44,8 @@
             list-style-type: none;
             &:hover{
                 color: var(--azul);
+                -webkit-transition: 0.2s;
+                -o-transition: 0.2s;
                 transition: 0.2s;
             }
             &:nth-child(n+2):nth-child(-n+6){
@@ -41,10 +54,14 @@
         }
     }
     .header-link{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         font-size: 20px;
         font-weight: bold;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         img{
             vertical-align: middle;
         }
@@ -56,16 +73,28 @@
     width: 100%;
     min-height: 200px;
     background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 70px;
     &__container{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%;
         margin: 50px 100px 0 100px;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
         &__grid-1{
             padding: 25px;
             h2{
@@ -96,39 +125,65 @@
                 font-size: 1.1rem;
             }
             &__botao-wpp{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 color: var(--primary);
                 background-color: var(--verde);
                 padding: 15px;
                 text-transform: uppercase;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 font-weight: bold;
                 border-radius: 8px;
-                width: 350px;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                width: 370px;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                
                 i{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     font-size: 24px;
                 }
                 span{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     padding-left: 8px;
                 }
                 &:hover{
-                    transition-duration: .3s;
+                    -webkit-transition-duration: .3s;
+                         -o-transition-duration: .3s;
+                            transition-duration: .3s;
+                    -webkit-transition-property: -webkit-transform;
+                    transition-property: -webkit-transform;
+                    -o-transition-property: transform;
                     transition-property: transform;
-                    transition-timing-function: ease-out;
-                    transform: translateY(-5px);
+                    transition-property: transform, -webkit-transform;
+                    -webkit-transition-timing-function: ease-out;
+                         -o-transition-timing-function: ease-out;
+                            transition-timing-function: ease-out;
+                    -webkit-transform: translateY(-5px);
+                        -ms-transform: translateY(-5px);
+                            transform: translateY(-5px);
                     background-color: var(--verdeclaro);   
                 }
             }
         }
         &__grid-2{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding: 25px 30px 0px;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             img{
                 max-height: 435px;
             }
@@ -149,10 +204,16 @@
         }
     }
     .container-beneficios{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 35px;
         .container-card{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             max-width: 600px;
             max-height: 400px;
@@ -160,17 +221,22 @@
                 margin-right: 35px;
             }
             .section-beneficios__card{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 padding: 32px;
                 border: 2px solid var(--cinza-claro);
                 border-radius: 20px;
-                flex-flow: column wrap;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column wrap;
+                        flex-flow: column wrap;
                 width: 100%;
                 height: 100%;
                 h3{
                     color: var(--preto-texto);
                     padding-bottom: 15px;
-    
+
                 }
                 p{
                     color: var(--cinza-texto);
@@ -185,15 +251,21 @@
 .section-sobremim{
     background-color: var(--cinza-back);
     .container-sobremim{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         max-width: 1400px;
         margin: 0 auto;
         padding: 70px 0;
     }
     &__foto{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding-right: 30px;
         img{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             border-radius: 10px;
             max-height: 530px;
@@ -237,15 +309,21 @@
 /*INFORMACÃO*/
 .section-informacao{
     .container-informacao{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         max-width: 1080px;
         margin: 0 auto;
         padding: 70px 40px 70px 40px;
     }
     &__imagem{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding-right: 60px;
         img{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             max-width: 180px;
         }
@@ -268,6 +346,8 @@
 /*ATENDIMENTO*/
 .section-atendimento{
     .container-atendimento{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         max-width: 1080px;
         margin: 0 auto;
@@ -287,6 +367,8 @@
             font-size: 15px;
         }
         .container_botao-wpp{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding: 20px;
             border-radius: 50px;
@@ -295,8 +377,12 @@
             text-transform: uppercase;
             font-size: 1.4rem;
             font-weight: bold;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin-top: 30px;
             
             i{
@@ -314,6 +400,8 @@
     &__imagem{
         padding-left: 15px;
         img{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             max-width: 450px;
         }
@@ -329,18 +417,32 @@
         }
     }
     .container-contato{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 40px;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
     .contato-info{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         .section-contato__endereco{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             .container-endereco{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 border-style: dashed;
                 border-width: 0px 1px 0px 0px;
                 border-color: var(--primary);
@@ -353,10 +455,16 @@
                     margin-right: 20px;
                 }
                 .span-end{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     font-size: 1.2rem;
-                    justify-content: center;
-                    align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     color: var(--primary);
                     padding-top: 8px;
                     margin-right: 20px;
@@ -367,11 +475,18 @@
             }
         }
         .section-contato__card{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             margin-left: 20px;
             .container-card{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-direction: column;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
                 h2{
                     font-size: 1.6rem;
                     padding-bottom: 10px;
@@ -379,14 +494,22 @@
                     text-align: center;
                 }
                 .icon{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
                     display: flex;
                     padding-top: 8px;
                     font-size: 1.2rem;
-                    justify-content: center;
-                    align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     color: var(--primary);
                     i{
-                        align-items: center;
+                        -webkit-box-align: center;
+                            -ms-flex-align: center;
+                                align-items: center;
                         padding-right: 5px;
                     }
                 }   
@@ -407,16 +530,21 @@
         border-radius:50px;
         text-align:center;
         font-size:30px;
-        box-shadow: 2px 2px 3px #999;
+        -webkit-box-shadow: 2px 2px 3px #999;
+                box-shadow: 2px 2px 3px #999;
         z-index:100;
     }
     .my-float{
         margin-top:16px;
     }
     .container-footer{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         background-color: var(--primary);
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         padding: 1% 5% 1% 5%;
         min-height: 30px;
         .copyright{
@@ -432,8 +560,12 @@
         .section-banner__container__grid-1{
             text-align: center;
             .teste{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
             }
         }
     }
@@ -469,8 +601,12 @@
         .section-banner__container__grid-1{
             text-align: center;
             .teste{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
             }
         }
     }
@@ -478,26 +614,36 @@
         .container-beneficios{
             .container-card{
                 max-width: 380px;
-                max-height: 300px;
+                max-height: 450px;
             }
         }
     }
     .section-sobremim{
         .container-sobremim{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             max-width: 500px;
         }
         &__foto{
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding-bottom: 35px;
         }
         &__texto{
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
         }
     }
     .section-contato{
         .container-contato{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             padding: 0;
         }
         .logo-footer{
@@ -511,16 +657,26 @@
     }
     .section-atendimento{
         .container-atendimento{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             padding: 0;
         }
         &__texto{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             max-width: 80%;
             margin: 0 auto;
             padding-top: 70px;
             .container_botao-wpp{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 margin-bottom: 40px;
                 margin-left: auto;
@@ -535,25 +691,41 @@
             }
         }
         &__imagem{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
         }
     }
     .section-informacao{
         .container-informacao{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             padding: 40px 0;
         }
         &__texto{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             max-width: 80%;
             margin: 0 auto;
             padding-top: 70px;
         }
         &__imagem{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             img{
                 max-width: 200px;
             }
@@ -563,18 +735,27 @@
 @media (max-width: 868px){
     .section-beneficios{
         .container-beneficios{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             margin-bottom: 0;
             margin-top: 0;
             .container-card{
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
                 max-width: 380px;
-                max-height: 350px;
+                max-height: 450px;
                 margin-bottom: 25px;
                 margin-right: auto;
                 margin-left: auto;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
                 &:nth-child(1){
                     margin-right: auto;
                 }
@@ -642,7 +823,10 @@
         .contato-info{
             margin: 0 auto;
             padding: 20px 40px 70px 40px;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             .section-contato__endereco{
                 .container-endereco{
                     border-width: 0px 0px 1px 0px;
@@ -665,7 +849,9 @@
             .section-contato__card{
                 margin-left: 0;
                 margin-top: 15px;
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
                 .container-card{
                     h2{
                         font-size: 1.5rem;
@@ -681,7 +867,10 @@
     }
     .footer-site{
         .container-footer{
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             padding: 5% 5% 5% 5%;
             text-align: center;
             .copyright{
@@ -730,7 +919,7 @@
                 &__botao-wpp{
                     width: 270px;
                     padding: 10px;
-                    font-size: 1.1rem;
+                    font-size: 1rem;
                     i{
                         font-size: 18px;
                     }
@@ -781,7 +970,9 @@
             img{
                 max-width: 300px;
                 margin-left: 0;
-                align-items: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
             }
         }
         &__texto{
