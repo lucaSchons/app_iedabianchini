@@ -10,4 +10,4 @@
 
 <h2 id="started">📌 Sobre</h2>
 Landing page desenvolvida para a psicopedagoga Ieda Bianchini.
-[PROJECT__BADGE][PROJECT__URL]
+[![project][PROJECT__BADGE]][PROJECT__URL]
