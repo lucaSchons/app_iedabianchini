@@ -8,6 +8,8 @@
 ![angular][ANGULAR__BADGE]
 ![typescript][TYPESCRIPT__BADGE]
 
-<h2 id="started">📌 Sobre</h2>
+<h2>📌 Sobre</h2>
 Landing page desenvolvida para a psicopedagoga Ieda Bianchini.
+
 [![project][PROJECT__BADGE]][PROJECT__URL]
+
